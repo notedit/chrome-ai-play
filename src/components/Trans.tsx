@@ -65,7 +65,7 @@ export function Trans() {
       setSupported(false)
       return;
     }
-    
+
     const session  = await ai.createTextSession()
     const result = await session.prompt(`You are a translation expert, please help me translate the following sentence  into ${language}:  ${content}`)
     setTranslated(result)    
@@ -89,7 +89,7 @@ export function Trans() {
           </div>
           <div className="grid gap-1.5">
             <Label htmlFor="language">Select target language</Label>
-            <Select id="language" name="language" value={language}  onValueChange={setLanguage} >
+            <Select name="language" value={language}  onValueChange={setLanguage} >
               <SelectTrigger className="w-full">
                 <SelectValue placeholder="Choose a language" />
               </SelectTrigger>
